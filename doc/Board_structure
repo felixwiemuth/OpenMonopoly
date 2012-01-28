@@ -1,0 +1,30 @@
+This defines how the game board and its fields is set up.
+The names of the parts are the correspondent class names.
+
+Field
+=====
+- A type of Monopoly board field, like street or "action" fields (go to jail, ...)
+- created once, constant, unique
+- abstract methods 'onLand()' and 'onPass()' that are executed by the games
+  main routine and must be implemented by different field types (classes)
+
+PlanElement
+===========
+- Encapsulates a 'Field' with a "previous" and "next" pointer
+- Can be linked with other 'PlanElement's by setting 'prev' and 'next'
+	--> beginning of chain has 'prev==null', end has 'next==null'
+	--> static function planned to undertake this task
+
+PlanElementBlock
+================
+- Saves a chain of 'PlanElement's by keeping the 'begin' and 'end' point
+  ('begin' = first 'PlanElement', 'end' = last 'PlanElement'
+- created once, constant, unique
+- Are used to add pre-defined groups of 'PlanElement's to the board
+	--> static function copies the 'PlanElement's of the read-only
+		'PlanElementBlock's
+
+GameBoard
+=========
+- Has ancors for first and last 'PlanElement' (chain of fields does not
+  necessarily have to be a circle)
