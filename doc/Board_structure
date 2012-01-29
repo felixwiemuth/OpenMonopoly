@@ -1,3 +1,9 @@
+/******************************************************
+ * Copyright (C) 2012 Felix Wiemuth                   *
+ * Licensed under the GNU GENERAL PUBLIC LICENSE      *
+ * See LICENSE or http://www.gnu.org/licenses/gpl.txt *
+ ******************************************************/
+
 This defines how the game board and its fields is set up.
 The names of the parts are the correspondent class names.
 
