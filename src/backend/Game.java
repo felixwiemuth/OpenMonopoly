@@ -6,10 +6,16 @@
 
 package backend;
 
+import backend.core.Board;
+
 /**
  *
  * @author Felix Wiemuth
  */
 public class Game {
+    private Board board;
+    private Playlist players;
 
+    public Game() {
+    }
 }
