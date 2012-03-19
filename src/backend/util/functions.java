@@ -6,7 +6,7 @@
 
 package backend.util;
 
-import backend.core.PlanElement;
+import backend.board.PlanElement;
 
 /**
  *

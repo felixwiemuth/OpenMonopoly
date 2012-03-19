@@ -5,7 +5,7 @@
  *****************************************************
  */
 
-package backend.core;
+package backend.board;
 
 /**
  *

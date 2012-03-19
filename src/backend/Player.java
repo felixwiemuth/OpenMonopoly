@@ -6,7 +6,7 @@
 
 package backend;
 
-import backend.core.PlanElement;
+import backend.board.PlanElement;
 import java.util.ArrayList;
 
 /**

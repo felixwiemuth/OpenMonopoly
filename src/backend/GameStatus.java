@@ -6,7 +6,7 @@
 
 package backend;
 
-import backend.core.Board;
+import backend.board.Board;
 
 /**
  *
