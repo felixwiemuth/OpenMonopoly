@@ -11,7 +11,7 @@ package backend.core;
  * @author Felix Wiemuth
  */
 public class Street extends PropertyField {
-    //TODO static memebr 'maxHousesInit' to have a standard iinitializer!
+    static int maxHousesInit = 5;
     private int maxHouses; //maximum number of houses that can be built (=hotel)
     private int[] rents; //[0]: rent without houses [n]: rent with n houses
     
@@ -19,6 +19,10 @@ public class Street extends PropertyField {
         super(name, price, group);
         this.maxHouses = maxHouses;
         rents = new int[maxHouses+1];
+    }
+    
+    public Street(String name, int price, int group) {
+        this(name, price, group, maxHousesInit);
     }
     
     /**
