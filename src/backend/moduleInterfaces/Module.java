@@ -12,9 +12,7 @@ import backend.core.GameStatus;
  * The OpenMonopoly "backend.core classes" do as less as possible and only
  * the very basic routines of the game. Every other action can be defined
  * by 'Module's what makes the game highly extendable and configurable.
- * The games main routine calls the methods of every module activated at
- * every moment a 'Module'-action (the methods that are defined by the
- * interface) is due.
+ * Every module should extend this class.
  * @author Felix Wiemuth
  */
 public abstract class Module {

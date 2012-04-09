@@ -7,6 +7,8 @@
 This explains how the logic of the game is structured and where
 modifications can be made easily (addons etc.).
 
+OpenMonopoly´s logic is based on modules (see "Module_system") and therefore
+seperated into the different module types.
 'InstructionCycle's roughly define the structure of the game and does not need to be changed when making smaller changes to the game.
 The main logic is implemented in the 'Module's which are used by the instruction cycles.
 

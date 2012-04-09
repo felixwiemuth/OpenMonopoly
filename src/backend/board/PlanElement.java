@@ -10,7 +10,7 @@ package backend.board;
  * 'Field' encapsulated to be used in the game board.
  * 'PlanElementBlock's are built of this type.
  * //TODO create immutable Field type
- * //TODO make THIS immutable. PlanElemenetBlock COPIES o´bjects of this type,
+ * //TODO make THIS immutable. PlanElemenetBlock COPIES objects of this type,
  * //       then Board copies those from those blocks again... (mind references!)
  *          in the borad there have to be complete free and only twice referenced
  *          objects (referenced by previous and next element)

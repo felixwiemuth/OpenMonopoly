@@ -26,7 +26,7 @@ PlanElement
 
 PlanElementBlock
 ================
-- a helping class to build 'PlanElement' chains easily
+- a helper class to build 'PlanElement' chains easily
 
 GameBoard
 =========

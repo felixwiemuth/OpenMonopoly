@@ -20,7 +20,7 @@ import backend.core.GameStatus;
  * including the needed methods which the 'Module's should implement.
  * @author Felix Wiemuth
  */
-public abstract class InstructionCycle {
+public abstract class InstructionCycle {    
     protected GameStatus status;
     
     /**
@@ -34,10 +34,6 @@ public abstract class InstructionCycle {
     /**
      * Start the execution of the cycle.
      * The cycle itselfs decides when to stop cycling.
-     * NOTE: Implement a 'run(...)' method:
-     * - 'run()'
-     * - 'run( DATA NEEDED )'
      */
     abstract public void run();
-
 }

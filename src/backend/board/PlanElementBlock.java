@@ -7,7 +7,7 @@
 package backend.board;
 
 /**
- *
+ * A helper class to build 'PlanElement' chains
  * @author Felix Wiemuth
  */
 public class PlanElementBlock {
