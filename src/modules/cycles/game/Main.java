@@ -4,45 +4,44 @@
  * See LICENSE or http://www.gnu.org/licenses/gpl.txt *
  ******************************************************/
 
-package backend.modules.turn;
+package modules.cycles.game;
 
-import backend.GameStatus;
-import backend.Module;
-import backend.cycles.Turn;
+import backend.core.GameStatus;
+import backend.moduleInterfaces.Module;
+import backend.cycles.Game;
 
 /**
  *
  * @author felix
  */
-public class Main extends Module implements Turn.TurnModule {
-
+public class Main extends Module implements Game.GameModule {
+    
     public Main(GameStatus status) {
         super(status);
     }
-    
+
     @Override
-    public void before_turn() {
+    public void before_game() {
         //DEBUG
-        mlog("TurnModule", "before_turn()");
+        mlog("GameModule", "before_game()");
+        status.runRounds = true;
     }
 
     @Override
-    public void dice() {
+    public void init() {
         //DEBUG
-        mlog("TurnModule", "dice()");
+        mlog("GameModule", "init()");
     }
 
     @Override
-    public void play() {
+    public void finish() {
         //DEBUG
-        mlog("TurnModule", "play()");
-        //DEBUG TEST
-        status.runTurns = false;
+        mlog("GameModule", "finish()");
     }
 
     @Override
-    public void after_turn() {
+    public void after_game() {
         //DEBUG
-        mlog("TurnModule", "after_turn()");
-    }    
+        mlog("GameModule", "after_game()");
+    }
 }

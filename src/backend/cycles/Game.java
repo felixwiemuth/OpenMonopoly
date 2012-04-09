@@ -6,8 +6,8 @@
 
 package backend.cycles;
 
-import backend.GameStatus;
-import backend.InstructionCycle;
+import backend.core.GameStatus;
+import backend.moduleInterfaces.InstructionCycle;
 import java.util.ArrayList;
 
 /**

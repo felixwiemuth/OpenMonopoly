@@ -4,7 +4,7 @@
  * See LICENSE or http://www.gnu.org/licenses/gpl.txt *
  ******************************************************/
 
-package backend;
+package backend.core;
 
 import backend.board.Board;
 

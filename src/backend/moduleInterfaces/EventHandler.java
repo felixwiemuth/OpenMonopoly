@@ -4,8 +4,9 @@
  * See LICENSE or http://www.gnu.org/licenses/gpl.txt *
  ******************************************************/
 
-package backend;
+package backend.moduleInterfaces;
 
+import backend.core.Player;
 import backend.board.Field;
 
 /**

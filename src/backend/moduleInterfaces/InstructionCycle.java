@@ -4,7 +4,9 @@
  * See LICENSE or http://www.gnu.org/licenses/gpl.txt *
  ******************************************************/
 
-package backend;
+package backend.moduleInterfaces;
+
+import backend.core.GameStatus;
 
 /**
  * An 'InstructionCycle' defines the order of steps that are

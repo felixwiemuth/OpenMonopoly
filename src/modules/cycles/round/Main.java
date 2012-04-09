@@ -4,10 +4,10 @@
  * See LICENSE or http://www.gnu.org/licenses/gpl.txt *
  ******************************************************/
 
-package backend.modules.round;
+package modules.cycles.round;
 
-import backend.GameStatus;
-import backend.Module;
+import backend.core.GameStatus;
+import backend.moduleInterfaces.Module;
 import backend.cycles.Round;
 
 /**

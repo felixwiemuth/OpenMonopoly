@@ -6,7 +6,7 @@
 
 package backend.logic;
 
-import backend.Player;
+import backend.core.Player;
 
 /**
  *

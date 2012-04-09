@@ -4,7 +4,9 @@
  * See LICENSE or http://www.gnu.org/licenses/gpl.txt *
  ******************************************************/
 
-package backend;
+package backend.moduleInterfaces;
+
+import backend.core.GameStatus;
 
 /**
  * The OpenMonopoly "backend.core classes" do as less as possible and only
