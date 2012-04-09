@@ -1,0 +1,45 @@
+/******************************************************
+ * Copyright (C) 2012 Felix Wiemuth                   *
+ * Licensed under the GNU GENERAL PUBLIC LICENSE      *
+ * See LICENSE or http://www.gnu.org/licenses/gpl.txt *
+ ******************************************************/
+
+The OpenMonopoly "backend.core classes" do as less as possible and only
+the very basic routines of the game. Every other action can be defined
+by 'Module's what makes the game highly extendable and configurable.
+
+OpenMonopoly distinguishes between three major types of modules which
+themselves have subtypes of modules. These are
+1) InstructionCycle module: The 'InstructionCycle's define the basic parts and
+steps of the game. InstructionCycle modules extend 'Module' and implement an
+'InstructionCycle' (backend.cycles.*) interface to define what should be done
+during these steps.
+2) Event module: There are different events occuring during the game such as
+if players move over the game board and pass fields or land on fields. Event
+modules implement interfaces provided by different 'Field' types.
+3) Action module: There may be some actions that are (mostly) independent on
+current positions in InstructionCycles or events and can be invoked by players
+on demand. These actions are defined in action modules by implementing
+'ActionModule' and passing some interaction information to the UI.
+
+General functions like moving a player should be defined in additional
+"logic files" so they can be used by different modules.
+
+1 - InstructionCycle Module
+----------------------------
+There are a few types of modules - for each type of 'InstructionCycle' individual modules must be written.
+
+The games 'InstructionCycle's call the methods of their module-interfaces - for each module loaded.
+That's why it's very easy to add functionality to the game - simply another Implementation of one of the InstructionCycle 'Event' interfaces must be implemented and added to the game. In this implementation, code must only by added for the differentiated "parts" of the game, represented by the interfaces methods, where additions are wanted.
+If very basic functionality should be changed, the 'Main'-modules have to be changed.
+To make customization easy, the standard functionality is split into different small modules. Note that some modules are "essential" ('Main' module), so the game won't work correctly without them or other equivalent modules.
+
+The games main routine calls the methods of every module activated at
+every moment a 'Module'-action (the methods that are defined by the
+interface) is due.
+
+
+Planned
+=======
+- Dependencies: modules can only be added to the game if other modules are loaded
+- Priorities for execution of the interface methods (simple number - when it's time to execute method "A" of all modules, first method "A" of module with lowest number for "A" is executed.
