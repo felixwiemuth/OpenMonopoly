@@ -15,6 +15,15 @@ package backend;
  * interface) is due.
  * @author Felix Wiemuth
  */
-public interface Module {
-
+public abstract class Module {
+    protected GameStatus status;
+    
+    public Module(GameStatus status) {
+        this.status = status;
+    }
+    
+    //DEBUG
+    public void mlog(String moduleType, String msg) {
+        System.out.println("MODULE " + moduleType + ":Main " + msg);
+    }
 }

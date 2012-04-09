@@ -12,10 +12,19 @@ import backend.core.Board;
  *
  * @author Felix Wiemuth
  */
-public class Game {
+public class GameStatus {
+    //data
     private Board board;
     private Playlist players;
+    
+    //status
+    public boolean runRounds; //if set 'false', rounds will end
+    public boolean runTurns; //if set 'false', current round will end
 
-    public Game() {
+    public GameStatus() {
     }
+    
+//    public boolean runRounds() {
+//        return runRounds;
+//    }
 }
