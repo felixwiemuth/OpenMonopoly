@@ -1,0 +1,22 @@
+/******************************************************
+ * Copyright (C) 2012 Felix Wiemuth                   *
+ * Licensed under the GNU GENERAL PUBLIC LICENSE      *
+ * See LICENSE or http://www.gnu.org/licenses/gpl.txt *
+ ******************************************************/
+
+This explains how the logic of the game is structured and where
+modifications can be made easily (addons etc.).
+
+'InstructionCycle's roughly define the structure of the game and does not need to be changed when making smaller changes to the game.
+The main logic is implemented in the 'Module's which are used by the instruction cycles.
+
+There is a hierarchy of the logic-modules: from top to bottom
+the parts get more changeable, the lowest levels are intended to
+allow addons etc. (e.g. can be enabled/disabled by the user).
+
+HIERARCHY
+
+GameMain
+'InstructionCycle'
+'Module'
+'Action'
