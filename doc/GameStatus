@@ -1,0 +1,10 @@
+/******************************************************
+ * Copyright (C) 2012 Felix Wiemuth                   *
+ * Licensed under the GNU GENERAL PUBLIC LICENSE      *
+ * See LICENSE or http://www.gnu.org/licenses/gpl.txt *
+ ******************************************************/
+
+This class keeps all information on the current game.
+Saving and loading the data of a 'GameStatus' object is enought to save/load a game.
+
+The different engines have read/write access to the contained data.
