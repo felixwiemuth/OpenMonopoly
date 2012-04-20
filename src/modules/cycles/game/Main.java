@@ -7,14 +7,13 @@
 package modules.cycles.game;
 
 import backend.core.GameStatus;
-import backend.moduleInterfaces.Module;
-import backend.cycles.Game;
+import backend.moduleInterfaces.cycles.GameModule;
 
 /**
  *
  * @author felix
  */
-public class Main extends Module implements Game.GameModule {
+public class Main extends GameModule {
     
     public Main(GameStatus status) {
         super(status);

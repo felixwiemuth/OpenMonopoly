@@ -7,14 +7,13 @@
 package modules.cycles.round;
 
 import backend.core.GameStatus;
-import backend.moduleInterfaces.Module;
-import backend.cycles.Round;
+import backend.moduleInterfaces.cycles.RoundModule;
 
 /**
  *
  * @author felix
  */
-public class Main extends Module implements Round.RoundModule {
+public class Main extends RoundModule {
 
     public Main(GameStatus status) {
         super(status);

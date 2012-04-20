@@ -17,6 +17,7 @@ import backend.core.GameStatus;
  */
 public abstract class Module {
     protected GameStatus status;
+    private boolean active; //'true': module is activated
     
     public Module(GameStatus status) {
         this.status = status;

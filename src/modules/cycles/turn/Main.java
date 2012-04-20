@@ -7,14 +7,13 @@
 package modules.cycles.turn;
 
 import backend.core.GameStatus;
-import backend.moduleInterfaces.Module;
-import backend.cycles.Turn;
+import backend.moduleInterfaces.cycles.TurnModule;
 
 /**
  *
  * @author felix
  */
-public class Main extends Module implements Turn.TurnModule {
+public class Main extends TurnModule {
 
     public Main(GameStatus status) {
         super(status);
