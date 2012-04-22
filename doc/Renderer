@@ -1,0 +1,39 @@
+/******************************************************
+ * Copyright (C) 2012 Felix Wiemuth                   *
+ * Licensed under the GNU GENERAL PUBLIC LICENSE      *
+ * See LICENSE or http://www.gnu.org/licenses/gpl.txt *
+ ******************************************************/
+ 
+This defines what a renderer for OpenMonopoly should do.
+ 
+"Renderer" in this case means a user interface consisting of a GUI as well as
+a 2D graphics renderer. The GUI should offer controls to make inputs and
+"displays" to show different types of information from the game.
+
+Requirements:
+
+General
+-------
+The Renderer should also be a little bit modular.
+E.g. the generic control/display system and the 2D graphics renderer should be
+easily reusable for other renderers.
+Apart from that the Renderer itselfs decides the design and adjustment
+of the different parts.
+A renderer must implement the "frontend.Renderer" class.
+
+GUI
+---
+- generic: Controls can be added and removed "on the fly"
+	- There is an interface to defined the actions triggered by controls which
+	  should be implemented when "passing" a new control to the renderer.
+	  In fact, the actions are already defined in special module types of
+	  OpenMonopoly, but when creating a new control this code must be wrapped
+	  into the interface provided by the renderer.
+- Various settings like titles, version-, license- and author information
+	  
+2D graphics renderer
+--------------------
+- Display the current game board situation
+- Provide animations for different types of game incidents
+- All needed information will be provided by the games "GameStatus" object,
+  especially the included data of "backend.board" classes
