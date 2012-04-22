@@ -4,18 +4,19 @@
  * See LICENSE or http://www.gnu.org/licenses/gpl.txt *
  ******************************************************/
 
-package backend.moduleInterfaces;
+package backend.moduleInterfaces.eventHandlers;
 
+import backend.board.Street;
 import backend.core.GameStatus;
+import backend.moduleInterfaces.Module;
 
 /**
  *
  * @author Felix Wiemuth
  */
-public abstract class EventModule extends Module implements EventHandler {
+public abstract class StreetHandler extends Module implements Street.EventHandler {
     
-    public EventModule(GameStatus status) {
+    public StreetHandler(GameStatus status) {
         super(status);
     }
-    
 }

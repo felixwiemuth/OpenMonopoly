@@ -6,11 +6,21 @@
 
 package backend.board;
 
+import backend.core.Player;
+import java.util.ArrayList;
+
 /**
  * A Monopoly Street
  * @author Felix Wiemuth
  */
 public class Street extends PropertyField {
+    public interface EventHandler {
+        public void onLand(Player player);
+        public void onPass(Player player);
+    }
+    
+    private ArrayList<EventHandler> handlers;
+    
     static int maxHousesInit = 5;
     private int maxHouses; //maximum number of houses that can be built (=hotel)
     private int[] rents; //[0]: rent without houses [n]: rent with n houses
@@ -32,14 +42,18 @@ public class Street extends PropertyField {
     public void generateRents() {
         //TODO implement        
     }
-
+    
     @Override
-    public void onLand() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void onLand(Player player) {
+        for (EventHandler h : handlers) {
+            h.onLand(player);
+        }
     }
 
     @Override
-    public void onPass() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void onPass(Player player) {
+        for (EventHandler h : handlers) {
+            h.onPass(player);
+        }
     }
 }

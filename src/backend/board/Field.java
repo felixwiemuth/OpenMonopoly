@@ -6,6 +6,8 @@
 
 package backend.board;
 
+import backend.core.Player;
+
 /**
  * All kinds of fields on the game board.
  * Should be created constant and only once, the game then
@@ -27,11 +29,11 @@ public abstract class Field {
     /**
      * Action when player lands on this field.
      */
-    abstract public void onLand(/*Player p*/);
+    abstract public void onLand(Player player);
     
     /**
      * Action when player passes this field (in gaming direction!)
      */
-    abstract public void onPass(/*Player p*/);
+    abstract public void onPass(Player player);
     
 }
